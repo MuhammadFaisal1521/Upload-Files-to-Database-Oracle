@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<page xmlns:jrad="http://xmlns.oracle.com/jrad" xmlns:oa="http://xmlns.oracle.com/oa" xmlns:ui="http://xmlns.oracle.com/uix/ui" version="10.1.3_1312" xml:lang="en-US" xmlns:user="http://xmlns.oracle.com/jrad/user" xmlns="http://xmlns.oracle.com/jrad" file-version="$Header$">
+   <content>
+      <oa:pageLayout id="region1" amDefName="SRL.oracle.apps.fnd.file.server.UploadFileAM" controllerClass="SRL.oracle.apps.fnd.file.webui.FileController" windowTitle="Sapphire Attachment Form" title="Sapphire Attachment Form">
+         <ui:corporateBranding>
+            <oa:image id="corporateBrandingImage" source="/OA_MEDIA/FNDSSCORP.gif"/>
+         </ui:corporateBranding>
+         <ui:contents>
+            <oa:table id="SrlFndAttachmentsView1">
+               <ui:contents>
+                  <oa:messageStyledText id="AttachmentsId" dataType="NUMBER" prompt="AttachmentsId" viewName="SrlFndAttachmentsView1" viewAttr="AttachmentsId"/>
+                  <oa:messageStyledText id="Filename" dataType="VARCHAR2" prompt="Filename" viewName="SrlFndAttachmentsView1" viewAttr="Filename" maximumLength="200"/>
+                  <oa:messageDownload id="Filesource" dataType="BLOB" prompt="Filesource" viewName="SrlFndAttachmentsView1" viewAttr="Filename" contentViewAttributeName="Filesource" fileContentType="ContentType"/>
+                  <oa:messageStyledText id="CreatedBy" dataType="NUMBER" prompt="CreatedBy" viewName="SrlFndAttachmentsView1" viewAttr="CreatedBy"/>
+                  <oa:messageStyledText id="CreationDate" dataType="DATE" prompt="CreationDate" viewName="SrlFndAttachmentsView1" viewAttr="CreationDate"/>
+                  <oa:messageTextInput id="ContentType" dataType="VARCHAR2" prompt="ContentType" viewName="SrlFndAttachmentsView1" viewAttr="ContentType" maximumLength="200" rendered="false"/>
+               </ui:contents>
+               <ui:tableActions>
+                  <oa:flowLayout id="region1011">
+                     <ui:contents>
+                        <oa:messageFileUpload id="AddAttachmentFile" dataType="BLOB" prompt="File :"/>
+                        <oa:submitButton id="UploadFileToDB" text="Add Attachment" prompt="Add Attachment">
+                           <ui:primaryClientAction>
+                              <ui:fireAction event="UploadFileToDB" id="fireAction211"/>
+                           </ui:primaryClientAction>
+                        </oa:submitButton>
+                     </ui:contents>
+                  </oa:flowLayout>
+               </ui:tableActions>
+            </oa:table>
+         </ui:contents>
+      </oa:pageLayout>
+   </content>
+</page>

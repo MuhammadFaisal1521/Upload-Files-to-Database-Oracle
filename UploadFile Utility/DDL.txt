@@ -1,0 +1,19 @@
+CREATE TABLE "APPS"."SRL_FND_ATTACHMENTS" 
+   (  "TRANSACTION_ID" NUMBER, 
+      "FILENAME" VARCHAR2(200), 
+      "FILESOURCE" BLOB, 
+      "CREATION_DATE" DATE, 
+      "CREATED_BY" NUMBER, 
+      "LAST_UPDATED_BY" NUMBER, 
+      "LAST_UPDATE_LOGIN" NUMBER, 
+      "LAST_UPDATE_DATE" DATE, 
+      "FORM_NAME" VARCHAR2(100), 
+      "CONTENT_TYPE" VARCHAR2(200), 
+      "ATTACHMENTS_ID" NUMBER
+   ) 
+   
+   
+   select * from SRL_FND_ATTACHMENTS
+   
+   
+   create sequence SRL_FND_ATTACHMENT_SEQ increment by 1 start with 1 nocache nocycle
